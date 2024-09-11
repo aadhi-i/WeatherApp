@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Error: No City</title>
+</head>
+<body class="bg-[url('./images/sky-background.jpg')] bg-center bg-cover bg-no-repeat min-h-screen flex flex-col gap-5 items-center p-10 ">
+    <h1 class="font-bold text-4xl text-center text-[#ff0000] sm:text-2xl">Error : No City Found!</h1>
+    <h1 class="font-bold text-4xl text-center text-[#ff0000] sm:text-2xl ">Please check again.</h1>
+    <button>
+        <a href="/"><ion-icon class="text-4xl p-3 text-blue-700" name="home"></ion-icon></a>
+    </button>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

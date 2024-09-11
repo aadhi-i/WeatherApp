@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,Http404
 import requests
 import json
 
@@ -42,7 +42,9 @@ def home(request):
             humidity=weather_data_res['main']['humidity']
             temperature=weather_data_res['main']['temp']
         else:
-            return render(request,'index.html')
+            raise Http404(f"City {city} not found")
+            # return render(request,'index.html')
+        
     return render(request,'index.html',{
         'icon_url':icon_url,
         'weather': weather,
